@@ -1,0 +1,42 @@
+<!-- Copyright 2025 OpenSynergy Indonesia
+     Copyright 2025 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="mro_order_detail_view_tree" model="ir.ui.view">
+    <field name="name">mro.order.detail - tree</field>
+    <field name="model">mro_order.detail</field>
+    <field name="arch" type="xml">
+        <tree string="MRO Order Details" editable="bottom">
+            <field name="sequence" widget="handle" />
+            <field name="action_id" />
+            <field name="next_mro_date" />
+            <field name="notes" />
+        </tree>
+    </field>
+</record>
+
+<record id="mro_order_detail_view_form" model="ir.ui.view">
+    <field name="name">mro.order.detail - form</field>
+    <field name="model">mro_order.detail</field>
+    <field name="arch" type="xml">
+        <form string="MRO Order Detail">
+            <sheet>
+                <group>
+                    <group>
+                        <field name="order_id" />
+                        <field name="sequence" />
+                        <field name="action_id" />
+                    </group>
+                    <group>
+                        <field name="lot_id" />
+                        <field name="next_mro_date" />
+                    </group>
+                </group>
+                <group>
+                    <field name="notes" />
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>

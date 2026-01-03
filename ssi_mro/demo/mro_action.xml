@@ -1,0 +1,104 @@
+<!-- Copyright 2025 OpenSynergy Indonesia
+     Copyright 2025 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <data noupdate="0">
+        <record id="mro_action_inspection" model="mro_action">
+            <field name="name">Inspection</field>
+            <field name="code">INSPECT</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_cleaning" model="mro_action">
+            <field name="name">Cleaning</field>
+            <field name="code">CLEAN</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_repair" model="mro_action">
+            <field name="name">Repair</field>
+            <field name="code">REPAIR</field>
+            <field name="kind">repair</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_replacement" model="mro_action">
+            <field name="name">Replacement</field>
+            <field name="code">REPLACE</field>
+            <field name="kind">repair</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_calibration" model="mro_action">
+            <field name="name">Calibration</field>
+            <field name="code">CALIB</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_testing" model="mro_action">
+            <field name="name">Testing</field>
+            <field name="code">TEST</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_adjustment" model="mro_action">
+            <field name="name">Adjustment</field>
+            <field name="code">ADJUST</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_upgrade" model="mro_action">
+            <field name="name">Upgrade</field>
+            <field name="code">UPGRADE</field>
+            <field name="kind">overhaul</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_overhaul" model="mro_action">
+            <field name="name">Overhaul</field>
+            <field name="code">OVERHAUL</field>
+            <field name="kind">overhaul</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_firmware_update" model="mro_action">
+            <field name="name">Firmware Update</field>
+            <field name="code">FW-UPDATE</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_configuration" model="mro_action">
+            <field name="name">Configuration</field>
+            <field name="code">CONFIG</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_health_check" model="mro_action">
+            <field name="name">Health Check</field>
+            <field name="code">HEALTH-CHK</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_backup_verification" model="mro_action">
+            <field name="name">Backup Verification</field>
+            <field name="code">BACKUP-VER</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_action_security_audit" model="mro_action">
+            <field name="name">Security Audit</field>
+            <field name="code">SEC-AUDIT</field>
+            <field name="kind">maintenance</field>
+            <field name="active" eval="1" />
+        </record>
+    </data>
+</odoo>

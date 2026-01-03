@@ -1,0 +1,30 @@
+<!-- Copyright 2025 OpenSynergy Indonesia
+     Copyright 2025 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <data noupdate="0">
+        <record id="mro_type_corrective" model="mro_type">
+            <field name="name">Corrective Maintenance</field>
+            <field name="code">CORRECTIVE</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_type_preventive" model="mro_type">
+            <field name="name">Preventive Maintenance</field>
+            <field name="code">PREVENTIVE</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_type_predictive" model="mro_type">
+            <field name="name">Predictive Maintenance</field>
+            <field name="code">PREDICTIVE</field>
+            <field name="active" eval="1" />
+        </record>
+
+        <record id="mro_type_breakdown" model="mro_type">
+            <field name="name">Breakdown Maintenance</field>
+            <field name="code">BREAKDOWN</field>
+            <field name="active" eval="1" />
+        </record>
+    </data>
+</odoo>
