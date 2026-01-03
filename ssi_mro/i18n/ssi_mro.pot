@@ -1,0 +1,877 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_mro
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__name
+msgid "# Document"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__action_id
+msgid "Action"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_needaction
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_needaction
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__active
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__active
+msgid "Active"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_state
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_state
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_adjustment
+msgid "Adjustment"
+msgstr ""
+
+#. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_all_group
+msgid "All"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_backup_verification
+msgid "Backup Verification"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_type,name:ssi_mro.mro_type_breakdown
+msgid "Breakdown Maintenance"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_calibration
+msgid "Calibration"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approve_ok
+msgid "Can Approve"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__cancel_ok
+msgid "Can Cancel"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__confirm_ok
+msgid "Can Confirm"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__done_ok
+msgid "Can Finished"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__reject_ok
+msgid "Can Reject"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__restart_ok
+msgid "Can Restart"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__open_ok
+msgid "Can Start"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__cancel_reason_id
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_cleaning
+msgid "Cleaning"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__code
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__code
+msgid "Code"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__company_id
+#: model:res.groups,name:ssi_mro.mro_order_company_group
+msgid "Company"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__company_partner_id
+msgid "Company Partner"
+msgstr ""
+
+#. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_child_company_group
+msgid "Company and All Child Companies"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_type,name:ssi_mro.mro_type_corrective
+msgid "Corrective Maintenance"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__create_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__create_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__create_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__create_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__create_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__create_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__customer_id
+msgid "Customer"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__date
+msgid "Date"
+msgstr ""
+
+#. module: ssi_mro
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_view_form
+msgid "Details"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__display_name
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__display_name
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__display_name
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__display_name
+#: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_firmware_update
+msgid "Firmware Update"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_type_icon
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_type_icon
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_health_check
+msgid "Health Check"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__id
+#: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_exception_icon
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_exception_icon
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__message_needaction
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__message_unread
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__message_needaction
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__message_unread
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__message_needaction
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__message_has_error
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__message_has_error
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_inspection
+msgid "Inspection"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_is_follower
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_is_follower
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__kind
+msgid "Kind"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action____last_update
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order____last_update
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail____last_update
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type____last_update
+#: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__write_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__write_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__write_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__write_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__write_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__write_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__lot_id
+msgid "Lot"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model,name:ssi_mro.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model,name:ssi_mro.model_mro_action
+msgid "MRO Action"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.actions.act_window,name:ssi_mro.mro_action_action
+#: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot__mro_action_ids
+#: model:ir.ui.menu,name:ssi_mro.mro_action_menu
+#: model_terms:ir.ui.view,arch_db:ssi_mro.view_production_lot_form
+msgid "MRO Actions"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model,name:ssi_mro.model_mro_order
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__order_id
+#: model:ir.module.category,name:ssi_mro.mro_order_module_category_data_ownership
+#: model:ir.module.category,name:ssi_mro.mro_order_module_category_workflow
+msgid "MRO Order"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model,name:ssi_mro.model_mro_order_detail
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_detail_view_form
+msgid "MRO Order Detail"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__detail_ids
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_detail_view_tree
+msgid "MRO Order Details"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.actions.act_window,name:ssi_mro.mro_order_action
+#: model:ir.ui.menu,name:ssi_mro.mro_order_menu
+msgid "MRO Orders"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model,name:ssi_mro.model_mro_type
+msgid "MRO Type"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.actions.act_window,name:ssi_mro.mro_type_action
+#: model:ir.ui.menu,name:ssi_mro.mro_type_menu
+msgid "MRO Types"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__kind__maintenance
+msgid "Maintenance"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__active
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__active
+msgid ""
+"Master data status\n"
+"\n"
+"* Inactive data can not be selected when creating new transaction\n"
+"* Transaction with inactive master data can still be viewed\n"
+"* Set master data as inactive if master data no longger needed,\n"
+"but master data already used on transaction"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__code
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__code
+msgid ""
+"Master data unique identifier.\n"
+"\n"
+"* Fill with '/' if You do not need unique identifier\n"
+"* Click 'Generate Code' button to automatically assign code.\n"
+"  Sequence template mush be set to perform this action\n"
+"  Only master data with '/' code will be assign automatic code"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_has_error
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_has_error
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__name
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__name
+msgid "Name"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_summary
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_summary
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_type_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_type_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__next_mro_date
+msgid "Next Date"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__note
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__note
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__notes
+msgid "Notes"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__message_needaction_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__message_needaction_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__message_has_error_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__message_has_error_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__message_unread_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__message_unread_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__kind__overhaul
+#: model:mro_action,name:ssi_mro.mro_action_overhaul
+msgid "Overhaul"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__policy_template_id
+msgid "Policy Template"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_type,name:ssi_mro.mro_type_predictive
+msgid "Predictive Maintenance"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_type,name:ssi_mro.mro_type_preventive
+msgid "Preventive Maintenance"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__product_id
+msgid "Product"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__kind__repair
+#: model:mro_action,name:ssi_mro.mro_action_repair
+msgid "Repair"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_replacement
+msgid "Replacement"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_user_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_user_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_security_audit
+msgid "Security Audit"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__lot_id
+msgid "Serial Number"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__open_ok
+msgid ""
+"Start policy\n"
+"\n"
+"* If active user can see and execute 'Start' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__state
+msgid "State"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_state
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_state
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_testing
+msgid "Testing"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__type_id
+msgid "Type"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_unread
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_unread
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_mro
+#: model:mro_action,name:ssi_mro.mro_action_upgrade
+msgid "Upgrade"
+msgstr ""
+
+#. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_user_group
+msgid "User"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr ""
+
+#. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_validator_group
+msgid "Validator"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__vendor_id
+msgid "Vendor"
+msgstr ""
+
+#. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_viewer_group
+msgid "Viewer"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__website_message_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__website_message_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_action__website_message_ids
+#: model:ir.model.fields,help:ssi_mro.field_mro_order__website_message_ids
+#: model:ir.model.fields,help:ssi_mro.field_mro_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_action_configurator_group
+msgid "mro_action"
+msgstr ""
+
+#. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_type_configurator_group
+msgid "mro_type"
+msgstr ""
