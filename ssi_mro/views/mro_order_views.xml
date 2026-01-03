@@ -1,0 +1,89 @@
+<!-- Copyright 2025 OpenSynergy Indonesia
+     Copyright 2025 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="mro_order_view_search" model="ir.ui.view">
+    <field name="name">mro_order - search</field>
+    <field name="model">mro_order</field>
+    <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="mro_order_view_tree" model="ir.ui.view">
+    <field name="name">mro_order - tree</field>
+    <field name="model">mro_order</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="date" />
+                <field name="type_id" />
+                <field name="product_id" />
+                <field name="lot_id" />
+                <field name="customer_id" optional="hide" />
+                <field name="vendor_id" optional="hide" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="mro_order_view_form" model="ir.ui.view">
+    <field name="name">mro_order - form</field>
+    <field name="model">mro_order</field>
+    <field name="mode">primary</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_form" />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="type_id" />
+                <field name="customer_id" />
+                <field name="vendor_id" />
+            </xpath>
+            <xpath expr="//group[@name='header_right']" position="inside">
+                <field name="date" />
+                <field name="product_id" domain="[('tracking', '=', 'serial')]" />
+                <field name="lot_id" domain="[('product_id', '=', product_id)]" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="detail" string="Details">
+                    <field
+                            name="detail_ids"
+                            nolabel="1"
+                            context="{'default_order_id': active_id}"
+                        >
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="action_id" />
+                            <field name="next_mro_date" />
+                            <field name="notes" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="mro_order_action" model="ir.actions.act_window">
+    <field name="name">MRO Orders</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">mro_order</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+        id="mro_order_menu"
+        name="MRO Orders"
+        action="mro_order_action"
+        groups="mro_order_viewer_group"
+        parent="stock.menu_stock_warehouse_mgmt"
+    />
+</odoo>
