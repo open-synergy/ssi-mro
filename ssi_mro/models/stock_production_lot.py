@@ -11,23 +11,23 @@ class StockProductionLot(models.Model):
         "stock.production.lot",
     ]
 
-    mro_action_ids = fields.One2many(
-        comodel_name="mro_order.detail",
-        string="MRO Actions",
+    mro_order_task_ids = fields.One2many(
+        comodel_name="mro_order_task",
+        string="MRO Order Task",
         inverse_name="lot_id",
     )
 
-    def action_open_mro_action(self):
+    def action_open_mro_task(self):
         for record in self.sudo():
-            result = record._open_mro_action()
+            result = record._open_mro_task()
         return result
 
-    def _open_mro_action(self):
+    def _open_mro_task(self):
         self.ensure_one()
         return {
-            "name": "MRO Actions",
+            "name": "MRO Order Tasks",
             "type": "ir.actions.act_window",
-            "res_model": "mro_order.detail",
+            "res_model": "mro_order_task",
             "view_mode": "tree,form",
             "domain": [("lot_id", "=", self.id)],
         }

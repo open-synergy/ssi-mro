@@ -2,7 +2,6 @@
      Copyright 2025 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-<data noupdate="1">
 <record id="mro_order_access_all" model="ir.model.access">
     <field name="name">mro_order - all</field>
     <field name="model_id" ref="model_mro_order" />
@@ -21,24 +20,4 @@
     <field name="perm_create" eval="1" />
     <field name="perm_unlink" eval="1" />
 </record>
-
-<record id="mro_order_detail_access_all" model="ir.model.access">
-    <field name="name">mro_order.detail - all</field>
-    <field name="model_id" ref="model_mro_order_detail" />
-    <field name="perm_read" eval="1" />
-    <field name="perm_write" eval="0" />
-    <field name="perm_create" eval="0" />
-    <field name="perm_unlink" eval="0" />
-</record>
-
-<record id="mro_order_detail_access_user" model="ir.model.access">
-    <field name="name">mro_order.detail - user</field>
-    <field name="model_id" ref="model_mro_order_detail" />
-    <field name="group_id" ref="mro_order_user_group" />
-    <field name="perm_read" eval="1" />
-    <field name="perm_write" eval="1" />
-    <field name="perm_create" eval="1" />
-    <field name="perm_unlink" eval="1" />
-</record>
-</data>
 </odoo>

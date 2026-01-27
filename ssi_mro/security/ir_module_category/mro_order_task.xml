@@ -1,0 +1,14 @@
+<!-- Copyright 2025 OpenSynergy Indonesia
+     Copyright 2025 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="mro_order_task_module_category_workflow" model="ir.module.category">
+    <field name="name">MRO Order Task</field>
+    <field name="parent_id" ref="ssi_stock.inventory_workflow_module_category" />
+</record>
+
+<record id="mro_order_task_module_category_data_ownership" model="ir.module.category">
+    <field name="name">MRO Order Task</field>
+    <field name="parent_id" ref="ssi_stock.inventory_data_ownership_module_category" />
+</record>
+</odoo>

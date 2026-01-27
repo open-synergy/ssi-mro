@@ -13,9 +13,9 @@
             <xpath expr="//field[@name='display_complete']" position="before">
                 <div class="oe_button_box" name="button_box">
                     <button
-                            name="action_open_mro_action"
+                            name="action_open_mro_task"
                             type="object"
-                            string="MRO Actions"
+                            string="MRO Order Tasks"
                             class="oe_stat_button"
                             icon="fa-wrench"
                         />
