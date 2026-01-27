@@ -18,7 +18,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[ssi_mro](ssi_mro/) | 14.0.1.0.0 |  | MRO
+[ssi_mro](ssi_mro/) | 14.0.1.1.0 |  | MRO
 
 [//]: # (end addons)
 
