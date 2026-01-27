@@ -16,8 +16,9 @@
         "ssi_transaction_open_mixin",
         "ssi_transaction_confirm_mixin",
         "ssi_transaction_done_mixin",
+        "ssi_transaction_terminate_mixin",
+        "ssi_transaction_ready_mixin",
         "ssi_m2o_configurator_mixin",
-        "ssi_transaction_cancel_mixin",
         "ssi_stock",
     ],
     "data": [
