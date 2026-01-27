@@ -15,19 +15,47 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__name
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__name
 msgid "# Document"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__action_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__action_id
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
 msgid "Action"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__action_domain
+msgid "Action Domain"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_needaction
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_needaction
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_needaction
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_needaction
 msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__action_python_code
+msgid "Action Python Code"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__action_selection_method
+msgid "Action Selection Method"
+msgstr ""
+
+#. module: ssi_mro
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
+msgid "Action Settings"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__action_ids
+msgid "Actions"
 msgstr ""
 
 #. module: ssi_mro
@@ -38,22 +66,26 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__active_approval_ids
 msgid "Active Approvals"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__active_approver_partner_ids
 msgid "Active Partners"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__active_approver_user_ids
 msgid "Active Users"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_ids
 msgid "Activities"
 msgstr ""
@@ -61,6 +93,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_exception_decoration
 msgid "Activity Exception Decoration"
 msgstr ""
@@ -68,6 +101,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_state
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_state
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_state
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_state
 msgid "Activity State"
 msgstr ""
@@ -75,8 +109,14 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_type_icon
 msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__actual_finish_date
+msgid "Actual Finish Date"
 msgstr ""
 
 #. module: ssi_mro
@@ -86,31 +126,54 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:res.groups,name:ssi_mro.mro_order_all_group
+#: model:res.groups,name:ssi_mro.mro_order_task_all_group
 msgid "All"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__allowed_mro_task_ids
+msgid "Allowed MRO Tasks"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__allowed_policy_template_ids
 msgid "Allowed Policy Templates"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__allowed_product_category_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__allowed_product_category_ids
+msgid "Allowed Product Category"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__allowed_product_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__allowed_product_ids
+msgid "Allowed Products"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__approval_template_id
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__approval_template_id
 msgid "Approval Configuration"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approval_template_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__approval_template_id
 msgid "Approval Template"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approval_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__approval_ids
 msgid "Approvals"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__approve_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__approve_ok
 msgid ""
 "Approve policy\n"
 "\n"
@@ -119,12 +182,14 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approved
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__approved
 msgid "Approved"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
@@ -146,56 +211,77 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__approve_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__approve_ok
 msgid "Can Approve"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__cancel_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__cancel_ok
 msgid "Can Cancel"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__confirm_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__confirm_ok
 msgid "Can Confirm"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__done_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__done_ok
 msgid "Can Finished"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__manual_number_ok
 msgid "Can Input Manual Document Number"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__reject_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__reject_ok
 msgid "Can Reject"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__restart_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__restart_ok
 msgid "Can Restart"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__restart_approval_ok
 msgid "Can Restart Approval"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__ready_ok
+msgid "Can Stagged"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__open_ok
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__open_ok
 msgid "Can Start"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__terminate_ok
+msgid "Can Terminate"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__cancel_reason_id
 msgid "Cancel Reason"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__cancel_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__cancel_ok
 msgid ""
 "Cancel policy\n"
 "\n"
@@ -215,22 +301,27 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__company_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__company_id
 #: model:res.groups,name:ssi_mro.mro_order_company_group
+#: model:res.groups,name:ssi_mro.mro_order_task_company_group
 msgid "Company"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__company_partner_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__company_partner_id
 msgid "Company Partner"
 msgstr ""
 
 #. module: ssi_mro
 #: model:res.groups,name:ssi_mro.mro_order_child_company_group
+#: model:res.groups,name:ssi_mro.mro_order_task_child_company_group
 msgid "Company and All Child Companies"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__company_id
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__company_id
 msgid ""
 "Company that own the document\n"
 "\n"
@@ -245,6 +336,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__confirm_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__confirm_ok
 msgid ""
 "Confirm policy\n"
 "\n"
@@ -259,7 +351,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__create_uid
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__create_uid
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__create_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__create_uid
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__create_uid
 msgid "Created by"
 msgstr ""
@@ -267,7 +359,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__create_date
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__create_date
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__create_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__create_date
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__create_date
 msgid "Created on"
 msgstr ""
@@ -279,29 +371,43 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__date
 msgid "Date"
-msgstr ""
-
-#. module: ssi_mro
-#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_view_form
-msgid "Details"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__display_name
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__display_name
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__display_name
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__display_name
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__display_name
 #: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__product_category_selection_method__domain
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__product_selection_method__domain
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__action_selection_method__domain
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__product_category_selection_method__domain
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__product_selection_method__domain
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
+msgid "Domain"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__done_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__done_ok
 msgid ""
 "Done policy\n"
 "\n"
 "* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__earliest_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__earliest_date
+msgid "Earliest Date"
 msgstr ""
 
 #. module: ssi_mro
@@ -312,6 +418,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_follower_ids
 msgid "Followers"
 msgstr ""
@@ -319,6 +426,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_channel_ids
 msgid "Followers (Channels)"
 msgstr ""
@@ -326,6 +434,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_partner_ids
 msgid "Followers (Partners)"
 msgstr ""
@@ -333,6 +442,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_type_icon
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_type_icon
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__activity_type_icon
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
@@ -345,7 +455,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__id
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__id
 #: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot__id
 msgid "ID"
@@ -354,6 +464,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_exception_icon
 msgid "Icon"
 msgstr ""
@@ -361,6 +472,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_exception_icon
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_exception_icon
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__activity_exception_icon
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_exception_icon
 msgid "Icon to indicate an exception activity."
 msgstr ""
@@ -370,6 +482,8 @@ msgstr ""
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__message_unread
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__message_needaction
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__message_unread
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__message_needaction
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__message_unread
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__message_needaction
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__message_unread
 msgid "If checked, new messages require your attention."
@@ -378,6 +492,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__message_has_error
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__message_has_error
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__message_has_error
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__message_has_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
@@ -390,6 +505,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_is_follower
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_is_follower
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_is_follower
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_is_follower
 msgid "Is Follower"
 msgstr ""
@@ -402,7 +518,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action____last_update
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order____last_update
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail____last_update
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task____last_update
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type____last_update
 #: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot____last_update
 msgid "Last Modified on"
@@ -411,7 +527,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__write_uid
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__write_uid
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__write_uid
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__write_uid
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__write_uid
 msgid "Last Updated by"
 msgstr ""
@@ -419,19 +535,30 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__write_date
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__write_date
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__write_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__write_date
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__lot_id
-msgid "Lot"
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__latest_date
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__latest_date
+msgid "Latest Date"
+msgstr ""
+
+#. module: ssi_mro
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_view_form
+msgid "Load Tasks"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model,name:ssi_mro.model_stock_production_lot
 msgid "Lot/Serial"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.ui.menu,name:ssi_mro.menu_mro_config
+msgid "MRO"
 msgstr ""
 
 #. module: ssi_mro
@@ -441,36 +568,42 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.actions.act_window,name:ssi_mro.mro_action_action
-#: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot__mro_action_ids
 #: model:ir.ui.menu,name:ssi_mro.mro_action_menu
-#: model_terms:ir.ui.view,arch_db:ssi_mro.view_production_lot_form
 msgid "MRO Actions"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model,name:ssi_mro.model_mro_order
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__order_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__order_id
 #: model:ir.module.category,name:ssi_mro.mro_order_module_category_data_ownership
 #: model:ir.module.category,name:ssi_mro.mro_order_module_category_workflow
 msgid "MRO Order"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model,name:ssi_mro.model_mro_order_detail
-#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_detail_view_form
-msgid "MRO Order Detail"
+#: model:ir.model,name:ssi_mro.model_mro_order_task
+#: model:ir.model.fields,field_description:ssi_mro.field_stock_production_lot__mro_order_task_ids
+#: model:ir.module.category,name:ssi_mro.mro_order_task_module_category_data_ownership
+#: model:ir.module.category,name:ssi_mro.mro_order_task_module_category_workflow
+msgid "MRO Order Task"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__detail_ids
-#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_detail_view_tree
-msgid "MRO Order Details"
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__task_ids
+#: model_terms:ir.ui.view,arch_db:ssi_mro.view_production_lot_form
+msgid "MRO Order Tasks"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.actions.act_window,name:ssi_mro.mro_order_action
 #: model:ir.ui.menu,name:ssi_mro.mro_order_menu
 msgid "MRO Orders"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.actions.act_window,name:ssi_mro.mro_order_task_action
+#: model:ir.ui.menu,name:ssi_mro.mro_order_task_menu
+msgid "MRO Tasks"
 msgstr ""
 
 #. module: ssi_mro
@@ -487,6 +620,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
@@ -497,7 +631,17 @@ msgid "Maintenance"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__product_category_selection_method__manual
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__product_selection_method__manual
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__action_selection_method__manual
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__product_category_selection_method__manual
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__product_selection_method__manual
+msgid "Manual"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__manual_number_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__manual_number_ok
 msgid ""
 "Manual number assignment policy\n"
 "\n"
@@ -531,6 +675,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_has_error
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_has_error
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_has_error
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_has_error
 msgid "Message Delivery error"
 msgstr ""
@@ -538,6 +683,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_ids
 msgid "Messages"
 msgstr ""
@@ -545,6 +691,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__my_activity_date_deadline
 msgid "My Activity Deadline"
 msgstr ""
@@ -557,12 +704,14 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__need_validation
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__need_validation
 msgid "Need Validation"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_date_deadline
 msgid "Next Activity Deadline"
 msgstr ""
@@ -570,6 +719,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_summary
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_summary
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_summary
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_summary
 msgid "Next Activity Summary"
 msgstr ""
@@ -577,35 +727,29 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_type_id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_type_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_type_id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_type_id
 msgid "Next Activity Type"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__next_approval_ids
 msgid "Next Approvals"
-msgstr ""
-
-#. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__next_mro_date
-msgid "Next Date"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__note
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__note
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__note
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__note
 msgid "Note"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__notes
-msgid "Notes"
-msgstr ""
-
-#. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
@@ -613,6 +757,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
@@ -620,6 +765,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__message_needaction_counter
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__message_needaction_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__message_needaction_counter
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr ""
@@ -627,6 +773,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__message_has_error_counter
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__message_has_error_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__message_has_error_counter
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr ""
@@ -634,6 +781,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__message_unread_counter
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__message_unread_counter
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__message_unread_counter
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__message_unread_counter
 msgid "Number of unread messages"
 msgstr ""
@@ -646,6 +794,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__policy_template_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__policy_template_id
 msgid "Policy Template"
 msgstr ""
 
@@ -660,12 +809,94 @@ msgid "Preventive Maintenance"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__product_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__product_id
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
 msgid "Product"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_category_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_category_ids
+msgid "Product Categories"
+msgstr ""
+
+#. module: ssi_mro
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
+msgid "Product Category"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_category_domain
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_category_domain
+msgid "Product Category Domain"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_category_python_code
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_category_python_code
+msgid "Product Category Python Code"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_category_selection_method
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_category_selection_method
+msgid "Product Category Selection Method"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_domain
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_domain
+msgid "Product Domain"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_python_code
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_python_code
+msgid "Product Python Code"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_selection_method
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_selection_method
+msgid "Product Selection Method"
+msgstr ""
+
+#. module: ssi_mro
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
+msgid "Product Settings"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_action__product_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_type__product_ids
+msgid "Products"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__product_category_selection_method__code
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__product_selection_method__code
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__action_selection_method__code
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__product_category_selection_method__code
+#: model:ir.model.fields.selection,name:ssi_mro.selection__mro_type__product_selection_method__code
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
+msgid "Python Code"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__ready_ok
+msgid ""
+"Ready policy\n"
+"\n"
+"* If active user can see and execute 'Staged' button"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__reject_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__reject_ok
 msgid ""
 "Reject policy\n"
 "\n"
@@ -674,6 +905,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__rejected
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__rejected
 msgid "Rejected"
 msgstr ""
 
@@ -690,18 +922,21 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__user_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__user_id
 msgid "Responsible"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__activity_user_id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__activity_user_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__activity_user_id
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__activity_user_id
 msgid "Responsible User"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__restart_approval_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__restart_approval_ok
 msgid ""
 "Restart approval policy\n"
 "\n"
@@ -710,6 +945,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__restart_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__restart_ok
 msgid ""
 "Restart policy\n"
 "\n"
@@ -718,6 +954,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__reviewer_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__reviewer_id
 msgid "Reviewer"
 msgstr ""
 
@@ -727,17 +964,19 @@ msgid "Security Audit"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_detail__sequence
-msgid "Sequence"
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
+msgid "Selection Method"
 msgstr ""
 
 #. module: ssi_mro
-#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__lot_id
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__lot_id
 msgid "Serial Number"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__open_ok
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__open_ok
 msgid ""
 "Start policy\n"
 "\n"
@@ -746,12 +985,14 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__state
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__state
 msgid "State"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_state
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_state
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__activity_state
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_state
 msgid ""
 "Status based on activities\n"
@@ -761,12 +1002,36 @@ msgid ""
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__task_is_finished
+msgid "Task is Finished"
+msgstr ""
+
+#. module: ssi_mro
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_view_form
+msgid "Tasks"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__terminate_reason_id
+msgid "Terminate Reason"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__terminate_ok
+msgid ""
+"Terminate policy\n"
+"\n"
+"* If active user can see and execute 'Terminate' button"
+msgstr ""
+
+#. module: ssi_mro
 #: model:mro_action,name:ssi_mro.mro_action_testing
 msgid "Testing"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__name
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__name
 msgid ""
 "Transaction/document number\n"
 "\n"
@@ -786,6 +1051,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr ""
@@ -793,6 +1059,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_unread
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_unread
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_unread
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_unread
 msgid "Unread Messages"
 msgstr ""
@@ -800,6 +1067,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr ""
@@ -810,12 +1078,14 @@ msgid "Upgrade"
 msgstr ""
 
 #. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_task_user_group
 #: model:res.groups,name:ssi_mro.mro_order_user_group
 msgid "User"
 msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__user_id
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__user_id
 msgid ""
 "User that responsible for document\n"
 "\n"
@@ -826,6 +1096,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__reviewer_id
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__reviewer_id
 msgid ""
 "User that responsible to review document\n"
 "\n"
@@ -834,10 +1105,12 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__active_approver_user_ids
 msgid "Users that can approve/reject document"
 msgstr ""
 
 #. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_task_validator_group
 #: model:res.groups,name:ssi_mro.mro_order_validator_group
 msgid "Validator"
 msgstr ""
@@ -848,6 +1121,7 @@ msgid "Vendor"
 msgstr ""
 
 #. module: ssi_mro
+#: model:res.groups,name:ssi_mro.mro_order_task_viewer_group
 #: model:res.groups,name:ssi_mro.mro_order_viewer_group
 msgid "Viewer"
 msgstr ""
@@ -855,6 +1129,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__website_message_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__website_message_ids
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__website_message_ids
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_type__website_message_ids
 msgid "Website Messages"
 msgstr ""
@@ -862,6 +1137,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,help:ssi_mro.field_mro_action__website_message_ids
 #: model:ir.model.fields,help:ssi_mro.field_mro_order__website_message_ids
+#: model:ir.model.fields,help:ssi_mro.field_mro_order_task__website_message_ids
 #: model:ir.model.fields,help:ssi_mro.field_mro_type__website_message_ids
 msgid "Website communication history"
 msgstr ""
@@ -874,4 +1150,29 @@ msgstr ""
 #. module: ssi_mro
 #: model:res.groups,name:ssi_mro.mro_type_configurator_group
 msgid "mro_type"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__num_of_canceled_tasks
+msgid "Σ Canceled Tasks"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__num_of_done_tasks
+msgid "Σ Done Tasks"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__num_of_open_tasks
+msgid "Σ Open Tasks"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__num_of_tasks
+msgid "Σ Tasks"
+msgstr ""
+
+#. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order__num_of_terminated_tasks
+msgid "Σ Terminated Tasks"
 msgstr ""
