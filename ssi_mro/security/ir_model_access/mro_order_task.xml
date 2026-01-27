@@ -2,19 +2,19 @@
      Copyright 2025 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-<record id="mro_type_access_all" model="ir.model.access">
-    <field name="name">mro_type - all</field>
-    <field name="model_id" ref="model_mro_type" />
+<record id="mro_order_task_access_all" model="ir.model.access">
+    <field name="name">mro_order_task - all</field>
+    <field name="model_id" ref="model_mro_order_task" />
     <field name="perm_read" eval="1" />
     <field name="perm_write" eval="0" />
     <field name="perm_create" eval="0" />
     <field name="perm_unlink" eval="0" />
 </record>
 
-<record id="mro_type_access_configurator" model="ir.model.access">
-    <field name="name">mro_type - configurator</field>
-    <field name="model_id" ref="model_mro_type" />
-    <field name="group_id" ref="mro_type_configurator_group" />
+<record id="mro_order_task_access_user" model="ir.model.access">
+    <field name="name">mro_order_task - user</field>
+    <field name="model_id" ref="model_mro_order_task" />
+    <field name="group_id" ref="mro_order_task_user_group" />
     <field name="perm_read" eval="1" />
     <field name="perm_write" eval="1" />
     <field name="perm_create" eval="1" />

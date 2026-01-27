@@ -37,6 +37,62 @@
     <field name="arch" type="xml">
         <data>
             <xpath expr="//field[@name='active']" position="after">
+                <field name="kind" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="product" string="Product Settings">
+                    <group
+                            name="product_category_1"
+                            col="2"
+                            colspan="4"
+                            string="Product Category"
+                        >
+                        <field
+                                name="product_category_selection_method"
+                                string="Selection Method"
+                            />
+                        <field
+                                name="product_category_ids"
+                                attrs="{'invisible':[('product_category_selection_method','!=','manual')]}"
+                            />
+                        <field
+                                name="product_category_domain"
+                                widget="domain"
+                                options="{'model': 'product.category', 'in_dialog': True}"
+                                attrs="{'invisible':[('product_category_selection_method','!=','domain')]}"
+                                string="Domain"
+                            />
+                        <field
+                                name="product_category_python_code"
+                                widget="ace"
+                                attrs="{'invisible':[('product_category_selection_method','!=','code')]}"
+                                string="Python Code"
+                            />
+                    </group>
+                    <group name="product_1" col="2" colspan="4" string="Product">
+                        <field
+                                name="product_selection_method"
+                                string="Selection Method"
+                            />
+                        <field
+                                name="product_ids"
+                                attrs="{'invisible':[('product_selection_method','!=','manual')]}"
+                            />
+                        <field
+                                name="product_domain"
+                                widget="domain"
+                                options="{'model': 'product.product', 'in_dialog': True}"
+                                attrs="{'invisible':[('product_selection_method','!=','domain')]}"
+                                string="Domain"
+                            />
+                        <field
+                                name="product_python_code"
+                                widget="ace"
+                                attrs="{'invisible':[('product_selection_method','!=','code')]}"
+                                string="Python Code"
+                            />
+                    </group>
+                </page>
             </xpath>
         </data>
     </field>
@@ -54,6 +110,6 @@
         name="MRO Actions"
         action="mro_action_action"
         groups="mro_action_configurator_group"
-        parent="stock.menu_stock_config_settings"
+        parent="menu_mro_config"
     />
 </odoo>
