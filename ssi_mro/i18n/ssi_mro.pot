@@ -365,6 +365,11 @@ msgid "Created on"
 msgstr ""
 
 #. module: ssi_mro
+#: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__current_location_id
+msgid "Current Location"
+msgstr ""
+
+#. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__customer_id
 msgid "Customer"
 msgstr ""
