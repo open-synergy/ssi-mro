@@ -162,6 +162,11 @@ class MroOrderTask(models.Model):
             "draft": [("readonly", False)],
         },
     )
+    current_location_id = fields.Many2one(
+        string="Current Location",
+        comodel_name="stock.location",
+        ondelete="restrict",
+    )
 
     @api.depends("action_id")
     def _compute_allowed_product_ids(self):
@@ -194,6 +199,16 @@ class MroOrderTask(models.Model):
     @api.onchange("product_id")
     def onchange_lot_id(self):
         self.lot_id = False
+
+    @api.onchange("lot_id")
+    def onchange_current_location_id(self):
+        self.current_location_id = False
+        if self.lot_id:
+            self.current_location_id = (
+                self.lot_id.serial_number_current_location_id
+                and self.lot_id.serial_number_current_location_id.id
+                or False
+            )
 
     @ssi_decorator.insert_on_form_view()
     def _insert_form_element(self, view_arch):
