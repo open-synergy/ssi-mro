@@ -1,0 +1,36 @@
+scenarios:
+  - name: "MRO Order Documenso - Create and Confirm"
+    steps:
+      - step: "Setup - create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Test MRO Type Documenso"
+          code: "TDOC001"
+
+      - step: "Create MRO Order"
+        action: "create"
+        model: "mro_order"
+        save_as: "mro_order"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['mro_type'].id"
+
+      - step: "Assert MRO Order created in draft"
+        action: "assert"
+        target: "mro_order"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Confirm MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
