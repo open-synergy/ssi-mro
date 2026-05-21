@@ -1,0 +1,287 @@
+scenarios:
+  - name: "MRO Order Task - Full Workflow: draft to done"
+    steps:
+      - step: "Setup - create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Test Action Task Full"
+          code: "ATASK001"
+          kind: "maintenance"
+
+      - step: "Setup - create product template"
+        action: "create"
+        model: "product.template"
+        save_as: "product_tmpl"
+        values:
+          name: "Test Product Task Full"
+          type: "product"
+
+      - step: "Search product product"
+        action: "search"
+        model: "product.product"
+        domain: [["product_tmpl_id", "=", "EVAL: registry['product_tmpl'].id"]]
+        save_as: "product"
+        limit: 1
+
+      - step: "Create stock lot (serial number)"
+        action: "create"
+        model: "stock.production.lot"
+        save_as: "lot"
+        values:
+          name: "SN-TASK-001"
+          product_id: "EVAL: registry['product'].id"
+
+      - step: "Create MRO Order Task"
+        action: "create"
+        model: "mro_order_task"
+        save_as: "mro_task"
+        as_user: "base.user_admin"
+        values:
+          action_id: "EVAL: registry['mro_action'].id"
+          product_id: "EVAL: registry['product'].id"
+          lot_id: "EVAL: registry['lot'].id"
+
+      - step: "Assert MRO Order Task created in draft"
+        action: "assert"
+        target: "mro_task"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Confirm MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "mro_task"
+        method: "invalidate_cache"
+
+      - step: "Approve MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "ready"
+
+      - step: "Invalidate cache after approve"
+        action: "call"
+        target: "mro_task"
+        method: "invalidate_cache"
+
+      - step: "Open MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_open"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "open"
+
+      - step: "Done MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_done"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+  - name: "MRO Order Task - Terminate Workflow"
+    steps:
+      - step: "Setup - create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Test Action Task Terminate"
+          code: "ATASK002"
+          kind: "repair"
+
+      - step: "Setup - create product template"
+        action: "create"
+        model: "product.template"
+        save_as: "product_tmpl"
+        values:
+          name: "Test Product Task Terminate"
+          type: "product"
+
+      - step: "Search product product"
+        action: "search"
+        model: "product.product"
+        domain: [["product_tmpl_id", "=", "EVAL: registry['product_tmpl'].id"]]
+        save_as: "product"
+        limit: 1
+
+      - step: "Create stock lot (serial number)"
+        action: "create"
+        model: "stock.production.lot"
+        save_as: "lot"
+        values:
+          name: "SN-TASK-002"
+          product_id: "EVAL: registry['product'].id"
+
+      - step: "Create MRO Order Task"
+        action: "create"
+        model: "mro_order_task"
+        save_as: "mro_task"
+        as_user: "base.user_admin"
+        values:
+          action_id: "EVAL: registry['mro_action'].id"
+          product_id: "EVAL: registry['product'].id"
+          lot_id: "EVAL: registry['lot'].id"
+
+      - step: "Confirm MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "mro_task"
+        method: "invalidate_cache"
+
+      - step: "Approve MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after approve"
+        action: "call"
+        target: "mro_task"
+        method: "invalidate_cache"
+
+      - step: "Open MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_open"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+
+      - step: "Terminate MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_terminate"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "terminate"
+
+  - name: "MRO Order Task - Cancel Workflow"
+    steps:
+      - step: "Setup - create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Test Action Task Cancel"
+          code: "ATASK003"
+          kind: "overhaul"
+
+      - step: "Setup - create product template"
+        action: "create"
+        model: "product.template"
+        save_as: "product_tmpl"
+        values:
+          name: "Test Product Task Cancel"
+          type: "product"
+
+      - step: "Search product product"
+        action: "search"
+        model: "product.product"
+        domain: [["product_tmpl_id", "=", "EVAL: registry['product_tmpl'].id"]]
+        save_as: "product"
+        limit: 1
+
+      - step: "Create stock lot (serial number)"
+        action: "create"
+        model: "stock.production.lot"
+        save_as: "lot"
+        values:
+          name: "SN-TASK-003"
+          product_id: "EVAL: registry['product'].id"
+
+      - step: "Create MRO Order Task"
+        action: "create"
+        model: "mro_order_task"
+        save_as: "mro_task"
+        as_user: "base.user_admin"
+        values:
+          action_id: "EVAL: registry['mro_action'].id"
+          product_id: "EVAL: registry['product'].id"
+          lot_id: "EVAL: registry['lot'].id"
+
+      - step: "Confirm MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "mro_task"
+        method: "invalidate_cache"
+
+      - step: "Approve MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after approve"
+        action: "call"
+        target: "mro_task"
+        method: "invalidate_cache"
+
+      - step: "Cancel MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_cancel"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "cancel"
+
+      - step: "Invalidate cache after cancel"
+        action: "call"
+        target: "mro_task"
+        method: "invalidate_cache"
+
+      - step: "Restart MRO Order Task"
+        action: "call"
+        target: "mro_task"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
