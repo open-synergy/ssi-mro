@@ -1,0 +1,94 @@
+scenarios:
+  - name: "MRO Type - Create"
+    steps:
+      - step: "Create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Test Type Create"
+          code: "TST001"
+      - step: "Assert MRO Type created"
+        action: "assert"
+        target: "mro_type"
+        asserts:
+          id:
+            type: "value"
+            operator: "is_truthy"
+          name:
+            type: "value"
+            expected: "Test Type Create"
+          code:
+            type: "value"
+            expected: "TST001"
+          active:
+            type: "value"
+            expected: true
+
+  - name: "MRO Type - Edit Name"
+    steps:
+      - step: "Create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Original Type Name"
+          code: "TST002"
+      - step: "Write new name"
+        action: "write"
+        target: "mro_type"
+        values:
+          name: "Updated Type Name"
+      - step: "Assert name updated"
+        action: "assert"
+        target: "mro_type"
+        asserts:
+          name:
+            type: "value"
+            expected: "Updated Type Name"
+
+  - name: "MRO Type - Delete"
+    steps:
+      - step: "Create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Type To Delete"
+          code: "TST003"
+      - step: "Delete MRO Type"
+        action: "call"
+        target: "mro_type"
+        method: "unlink"
+      - step: "Verify deleted"
+        action: "search"
+        model: "mro_type"
+        domain: [["code", "=", "TST003"]]
+        save_as: "result"
+        expect_count: 0
+
+  - name: "MRO Type - With Product Selection Methods"
+    steps:
+      - step: "Create MRO Type with manual method"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Type With Manual Selection"
+          code: "TST004"
+          product_category_selection_method: "manual"
+          product_selection_method: "manual"
+          action_selection_method: "manual"
+      - step: "Assert selection methods set"
+        action: "assert"
+        target: "mro_type"
+        asserts:
+          product_category_selection_method:
+            type: "value"
+            expected: "manual"
+          product_selection_method:
+            type: "value"
+            expected: "manual"
+          action_selection_method:
+            type: "value"
+            expected: "manual"

@@ -1,0 +1,216 @@
+scenarios:
+  - name: "MRO Order - Full Workflow: draft to done"
+    steps:
+      - step: "Setup - create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Test MRO Type Order"
+          code: "TORD001"
+
+      - step: "Create MRO Order"
+        action: "create"
+        model: "mro_order"
+        save_as: "mro_order"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['mro_type'].id"
+
+      - step: "Assert MRO Order created in draft"
+        action: "assert"
+        target: "mro_order"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+          num_of_tasks:
+            type: "value"
+            expected: 0
+          task_is_finished:
+            type: "value"
+            expected: true
+
+      - step: "Confirm MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "mro_order"
+        method: "invalidate_cache"
+
+      - step: "Approve MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "open"
+
+      - step: "Invalidate cache after approve"
+        action: "call"
+        target: "mro_order"
+        method: "invalidate_cache"
+
+      - step: "Assert MRO Order is open"
+        action: "assert"
+        target: "mro_order"
+        asserts:
+          state:
+            type: "value"
+            expected: "open"
+
+      - step: "Done MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_done"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+  - name: "MRO Order - Cancel Workflow"
+    steps:
+      - step: "Setup - create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Test MRO Type Cancel"
+          code: "TCAN001"
+
+      - step: "Create MRO Order"
+        action: "create"
+        model: "mro_order"
+        save_as: "mro_order"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['mro_type'].id"
+
+      - step: "Confirm MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "mro_order"
+        method: "invalidate_cache"
+
+      - step: "Approve MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+
+      - step: "Invalidate cache after approve"
+        action: "call"
+        target: "mro_order"
+        method: "invalidate_cache"
+
+      - step: "Cancel MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_cancel"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "cancel"
+
+      - step: "Invalidate cache after cancel"
+        action: "call"
+        target: "mro_order"
+        method: "invalidate_cache"
+
+      - step: "Restart MRO Order"
+        action: "call"
+        target: "mro_order"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+  - name: "MRO Order - Compute Task Stats"
+    steps:
+      - step: "Setup - create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "Test MRO Type Task Stats"
+          code: "TSTAT001"
+
+      - step: "Setup - create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Test Action Stat"
+          code: "ASTAT001"
+          kind: "maintenance"
+
+      - step: "Setup - create product template"
+        action: "create"
+        model: "product.template"
+        save_as: "product_tmpl"
+        values:
+          name: "Test Product MRO"
+          type: "product"
+
+      - step: "Search product product"
+        action: "search"
+        model: "product.product"
+        domain: [["product_tmpl_id", "=", "EVAL: registry['product_tmpl'].id"]]
+        save_as: "product"
+        limit: 1
+
+      - step: "Create stock lot (serial number)"
+        action: "create"
+        model: "stock.production.lot"
+        save_as: "lot"
+        values:
+          name: "SN-TEST-001"
+          product_id: "EVAL: registry['product'].id"
+
+      - step: "Create MRO Order"
+        action: "create"
+        model: "mro_order"
+        save_as: "mro_order"
+        as_user: "base.user_admin"
+        values:
+          type_id: "EVAL: registry['mro_type'].id"
+
+      - step: "Assert initial task counts"
+        action: "assert"
+        target: "mro_order"
+        asserts:
+          num_of_tasks:
+            type: "value"
+            expected: 0
+          num_of_open_tasks:
+            type: "value"
+            expected: 0
+          num_of_done_tasks:
+            type: "value"
+            expected: 0
+          task_is_finished:
+            type: "value"
+            expected: true

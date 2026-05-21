@@ -1,0 +1,114 @@
+scenarios:
+  - name: "MRO Action - Create Maintenance"
+    steps:
+      - step: "Create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Test Action Maintenance"
+          code: "ACT001"
+          kind: "maintenance"
+      - step: "Assert MRO Action created"
+        action: "assert"
+        target: "mro_action"
+        asserts:
+          id:
+            type: "value"
+            operator: "is_truthy"
+          name:
+            type: "value"
+            expected: "Test Action Maintenance"
+          kind:
+            type: "value"
+            expected: "maintenance"
+          active:
+            type: "value"
+            expected: true
+
+  - name: "MRO Action - Create Repair"
+    steps:
+      - step: "Create MRO Action Repair"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Test Action Repair"
+          code: "ACT002"
+          kind: "repair"
+      - step: "Assert kind is repair"
+        action: "assert"
+        target: "mro_action"
+        asserts:
+          kind:
+            type: "value"
+            expected: "repair"
+
+  - name: "MRO Action - Edit Name"
+    steps:
+      - step: "Create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Original Action Name"
+          code: "ACT003"
+          kind: "maintenance"
+      - step: "Write new name"
+        action: "write"
+        target: "mro_action"
+        values:
+          name: "Updated Action Name"
+      - step: "Assert name updated"
+        action: "assert"
+        target: "mro_action"
+        asserts:
+          name:
+            type: "value"
+            expected: "Updated Action Name"
+
+  - name: "MRO Action - Delete"
+    steps:
+      - step: "Create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Action To Delete"
+          code: "ACT004"
+          kind: "overhaul"
+      - step: "Delete MRO Action"
+        action: "call"
+        target: "mro_action"
+        method: "unlink"
+      - step: "Verify deleted"
+        action: "search"
+        model: "mro_action"
+        domain: [["code", "=", "ACT004"]]
+        save_as: "result"
+        expect_count: 0
+
+  - name: "MRO Action - With Domain Product Selection"
+    steps:
+      - step: "Create MRO Action with domain selection"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "Action Domain Selection"
+          code: "ACT005"
+          kind: "maintenance"
+          product_selection_method: "domain"
+          product_domain: "[['type', '=', 'product']]"
+          product_category_selection_method: "domain"
+          product_category_domain: "[]"
+      - step: "Assert domain methods set"
+        action: "assert"
+        target: "mro_action"
+        asserts:
+          product_selection_method:
+            type: "value"
+            expected: "domain"
+          product_category_selection_method:
+            type: "value"
+            expected: "domain"
