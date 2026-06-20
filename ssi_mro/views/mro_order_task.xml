@@ -12,6 +12,29 @@
     <field name="mode">primary</field>
     <field name="arch" type="xml">
         <data>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="product_id" />
+                <field name="lot_id" />
+                <field name="action_id" />
+                <field name="order_id" />
+            </xpath>
+            <xpath expr="//filter[@name='grp_responsible']" position="after">
+                <filter
+                        name="grp_product_id"
+                        string="Product"
+                        context="{'group_by':'product_id'}"
+                    />
+                <filter
+                        name="grp_action_id"
+                        string="Action"
+                        context="{'group_by':'action_id'}"
+                    />
+                <filter
+                        name="grp_order_id"
+                        string="MRO Order"
+                        context="{'group_by':'order_id'}"
+                    />
+            </xpath>
         </data>
     </field>
 </record>
