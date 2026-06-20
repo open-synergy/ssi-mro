@@ -12,6 +12,30 @@
     <field name="mode">primary</field>
     <field name="arch" type="xml">
         <data>
+            <xpath expr="//field[@name='code']" position="after">
+                <filter
+                        name="dom_kind_maintenance"
+                        string="Maintenance"
+                        domain="[('kind','=','maintenance')]"
+                    />
+                <filter
+                        name="dom_kind_repair"
+                        string="Repair"
+                        domain="[('kind','=','repair')]"
+                    />
+                <filter
+                        name="dom_kind_overhaul"
+                        string="Overhaul"
+                        domain="[('kind','=','overhaul')]"
+                    />
+                <group name="group_by">
+                    <filter
+                            name="grp_kind"
+                            string="Kind"
+                            context="{'group_by':'kind'}"
+                        />
+                </group>
+            </xpath>
         </data>
     </field>
 </record>
