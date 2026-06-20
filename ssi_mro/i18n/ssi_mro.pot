@@ -21,6 +21,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__action_id
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_task_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
 msgid "Action"
 msgstr ""
@@ -371,6 +372,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__customer_id
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_view_search
 msgid "Customer"
 msgstr ""
 
@@ -517,6 +519,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_action__kind
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_search
 msgid "Kind"
 msgstr ""
 
@@ -582,6 +585,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__order_id
 #: model:ir.module.category,name:ssi_mro.mro_order_module_category_data_ownership
 #: model:ir.module.category,name:ssi_mro.mro_order_module_category_workflow
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_task_view_search
 msgid "MRO Order"
 msgstr ""
 
@@ -632,6 +636,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__kind__maintenance
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_search
 msgid "Maintenance"
 msgstr ""
 
@@ -794,6 +799,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__kind__overhaul
 #: model:mro_action,name:ssi_mro.mro_action_overhaul
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_search
 msgid "Overhaul"
 msgstr ""
 
@@ -816,6 +822,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order_task__product_id
 #: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_task_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_mro.mro_type_view_form
 msgid "Product"
 msgstr ""
@@ -917,6 +924,7 @@ msgstr ""
 #. module: ssi_mro
 #: model:ir.model.fields.selection,name:ssi_mro.selection__mro_action__kind__repair
 #: model:mro_action,name:ssi_mro.mro_action_repair
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_action_view_search
 msgid "Repair"
 msgstr ""
 
@@ -1050,6 +1058,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__type_id
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_view_search
 msgid "Type"
 msgstr ""
 
@@ -1122,6 +1131,7 @@ msgstr ""
 
 #. module: ssi_mro
 #: model:ir.model.fields,field_description:ssi_mro.field_mro_order__vendor_id
+#: model_terms:ir.ui.view,arch_db:ssi_mro.mro_order_view_search
 msgid "Vendor"
 msgstr ""
 
