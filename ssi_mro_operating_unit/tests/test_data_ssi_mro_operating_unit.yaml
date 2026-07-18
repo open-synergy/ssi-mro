@@ -1,0 +1,224 @@
+scenarios:
+  - name: "MRO Order - Operating Unit is set"
+    steps:
+      - step: "Setup - create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "OU Test MRO Type"
+          code: "OUTORD001"
+
+      - step: "Create MRO Order with operating_unit_id"
+        action: "create"
+        model: "mro_order"
+        save_as: "mro_order"
+        as_user: "base.user_admin"
+        values:
+          type_id: "REC: mro_type.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert MRO Order operating_unit_id is set"
+        action: "assert"
+        target: "mro_order"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "MRO Order Task - Operating Unit is set"
+    steps:
+      - step: "Setup - create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "OU Test Action"
+          code: "OUATASK001"
+          kind: "maintenance"
+
+      - step: "Setup - create product template"
+        action: "create"
+        model: "product.template"
+        save_as: "product_tmpl"
+        values:
+          name: "OU Test Product MRO"
+          type: "product"
+
+      - step: "Search product product"
+        action: "search"
+        model: "product.product"
+        domain: [["product_tmpl_id", "=", "REC: product_tmpl.id"]]
+        save_as: "product"
+        limit: 1
+
+      - step: "Create stock lot (serial number)"
+        action: "create"
+        model: "stock.production.lot"
+        save_as: "lot"
+        values:
+          name: "OU-SN-TASK-001"
+          product_id: "REC: product.id"
+
+      - step: "Create MRO Order Task with operating_unit_id"
+        action: "create"
+        model: "mro_order_task"
+        save_as: "mro_task"
+        as_user: "base.user_admin"
+        values:
+          action_id: "REC: mro_action.id"
+          product_id: "REC: product.id"
+          lot_id: "REC: lot.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert MRO Order Task operating_unit_id is set"
+        action: "assert"
+        target: "mro_task"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "MRO Order - ir.rule denies access outside assigned operating unit"
+    steps:
+      - step: "Setup - create MRO Type"
+        action: "create"
+        model: "mro_type"
+        save_as: "mro_type"
+        values:
+          name: "OU Rule Test MRO Type"
+          code: "OURULETORD001"
+
+      - step: "Create MRO Order with operating_unit_id"
+        action: "create"
+        model: "mro_order"
+        save_as: "mro_order"
+        as_user: "base.user_admin"
+        values:
+          type_id: "REC: mro_type.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Create user restricted to a different operating unit"
+        action: "create"
+        model: "res.users"
+        save_as: "restricted_user"
+        values:
+          name: "MRO Order OU Restricted User"
+          login: "ou_restricted_mro_order@example.com"
+          groups_id:
+            [
+              [
+                6,
+                0,
+                [
+                  "REF: base.group_user",
+                  "REF: ssi_mro.mro_order_user_group",
+                  "REF: ssi_mro_operating_unit.mro_order_ou_group",
+                ],
+              ],
+            ]
+          assigned_operating_unit_ids: [[6, 0, []]]
+
+      - step: "Restricted user cannot read the record outside their operating unit"
+        action: "call"
+        target: "mro_order"
+        method: "read"
+        as_user: "restricted_user"
+        args:
+          - ["operating_unit_id"]
+        expect_error:
+          type: "AccessError"
+
+      - step: "Restricted user cannot write the record outside their operating unit"
+        action: "write"
+        target: "mro_order"
+        as_user: "restricted_user"
+        expect_error:
+          type: "AccessError"
+        values:
+          customer_id: false
+
+  - name: "MRO Order Task - ir.rule denies access outside assigned operating unit"
+    steps:
+      - step: "Setup - create MRO Action"
+        action: "create"
+        model: "mro_action"
+        save_as: "mro_action"
+        values:
+          name: "OU Rule Test Action"
+          code: "OURULEATASK001"
+          kind: "maintenance"
+
+      - step: "Setup - create product template"
+        action: "create"
+        model: "product.template"
+        save_as: "product_tmpl"
+        values:
+          name: "OU Rule Test Product MRO"
+          type: "product"
+
+      - step: "Search product product"
+        action: "search"
+        model: "product.product"
+        domain: [["product_tmpl_id", "=", "REC: product_tmpl.id"]]
+        save_as: "product"
+        limit: 1
+
+      - step: "Create stock lot (serial number)"
+        action: "create"
+        model: "stock.production.lot"
+        save_as: "lot"
+        values:
+          name: "OU-RULE-SN-TASK-001"
+          product_id: "REC: product.id"
+
+      - step: "Create MRO Order Task with operating_unit_id"
+        action: "create"
+        model: "mro_order_task"
+        save_as: "mro_task"
+        as_user: "base.user_admin"
+        values:
+          action_id: "REC: mro_action.id"
+          product_id: "REC: product.id"
+          lot_id: "REC: lot.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Create user restricted to a different operating unit"
+        action: "create"
+        model: "res.users"
+        save_as: "restricted_user"
+        values:
+          name: "MRO Order Task OU Restricted User"
+          login: "ou_restricted_mro_order_task@example.com"
+          groups_id:
+            [
+              [
+                6,
+                0,
+                [
+                  "REF: base.group_user",
+                  "REF: ssi_mro.mro_order_task_user_group",
+                  "REF: ssi_mro_operating_unit.mro_order_task_ou_group",
+                ],
+              ],
+            ]
+          assigned_operating_unit_ids: [[6, 0, []]]
+
+      - step: "Restricted user cannot read the record outside their operating unit"
+        action: "call"
+        target: "mro_task"
+        method: "read"
+        as_user: "restricted_user"
+        args:
+          - ["operating_unit_id"]
+        expect_error:
+          type: "AccessError"
+
+      - step: "Restricted user cannot write the record outside their operating unit"
+        action: "write"
+        target: "mro_task"
+        as_user: "restricted_user"
+        expect_error:
+          type: "AccessError"
+        values:
+          earliest_date: false
