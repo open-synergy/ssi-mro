@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo14-addon-ssi_mro',
         'odoo14-addon-ssi_mro_documenso_signing',
+        'odoo14-addon-ssi_mro_operating_unit',
     ],
     classifiers=[
         'Programming Language :: Python',

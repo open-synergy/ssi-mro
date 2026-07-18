@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [ssi_mro](ssi_mro/) | 14.0.1.2.0 |  | MRO
 [ssi_mro_documenso_signing](ssi_mro_documenso_signing/) | 14.0.1.1.0 |  | MRO - Documenso Signing Integration
+[ssi_mro_operating_unit](ssi_mro_operating_unit/) | 14.0.1.0.0 |  | MRO + Operating Unit
 
 [//]: # (end addons)
 
